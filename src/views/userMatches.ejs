@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+</head>
+<body class="container">
+
+    <header>
+    </header>
+
+    <main>
+        <div class="jumbotron">
+            <h1>User Matches</h1>
+            <h4><%= message %></h4>
+            <ul>
+                <% data.upcomingForYou.forEach(function(mascot) { %>
+                    <li>
+                        Match:<strong><%= mascot.name %></strong>
+                        Status:<strong><%= mascot.status %></strong>
+                        Date Time:<strong><%= mascot.dateTime %></strong>
+                        Home Team:<strong><%= mascot.homeTeam %></strong>
+                        Away Team:<strong><%= mascot.awayTeam %></strong>
+                        Winner:<strong><%= mascot.winnerTeam %></strong>
+                    </li>
+                <% }); %>
+            </ul>
+        </div>
+        <div class="jumbotron">
+            <h1>All Matches</h1>
+            <h4><%= message %></h4>
+            <ul>
+                <% data.allMatches.forEach(function(mascot) { %>
+                    <li>
+                        Match:<strong><%= mascot.name %></strong>
+                        Status:<strong><%= mascot.status %></strong>
+                        Date Time:<strong><%= mascot.dateTime %></strong>
+                        Home Team:<strong><%= mascot.homeTeam %></strong>
+                        Away Team:<strong><%= mascot.awayTeam %></strong>
+                        Winner:<strong><%= mascot.winnerTeam %></strong>
+                    </li>
+                <% }); %>
+            </ul>
+        </div>
+    </main>
+
+    <footer>
+    </footer>
+
+</body>
+</html>

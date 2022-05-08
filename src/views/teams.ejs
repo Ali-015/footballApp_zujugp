@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+</head>
+<body class="container">
+
+    <header>
+    </header>
+
+    <main>
+        <div class="jumbotron">
+            <h1>All Teams</h1>
+            <h4><%= message %></h4>
+            <ul>
+                <% data.forEach(function(team) { %>
+                    <li>
+                        <strong><%= team.name %></strong>
+                    </li>
+                <% }); %>
+            </ul>
+        </div>
+    </main>
+
+    <footer>
+    </footer>
+
+</body>
+</html>
