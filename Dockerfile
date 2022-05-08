@@ -1,16 +1,11 @@
-FROM node:8.9.1-alpine
+FROM node:14.18.0-alpine
 
 RUN mkdir -p /opt/app
-
+WORKDIR /opt/app
+COPY package.json /opt/app/
+RUN npm update --legacy-peer-deps
 COPY . /opt/app
 
 WORKDIR /opt/app
 
-RUN apk add --no-cache --virtual build-deps \
-			python=2.7.13-r1 \
-			make=4.2.1-r0 \
-			g++=6.3.0-r4 \
-	&& npm rebuild \
-	&& apk del build-deps
-
-CMD ["npm", "start"]
+CMD ["npm", "start:dev"]
