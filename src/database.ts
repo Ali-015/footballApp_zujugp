@@ -8,6 +8,7 @@ export let dbnew = new sqlite3.Database(DBSOURCE, async (err: any) => {
         dbnew.run("CREATE TABLE IF NOT EXISTS team (id INTEGER PRIMARY KEY AUTOINCREMENT,name text)");
         dbnew.run("INSERT INTO team (name) VALUES ('team1')");
         dbnew.run("INSERT INTO team (name) VALUES ('team2')");
+        dbnew.run("INSERT INTO team (name) VALUES ('team3')");
 
         dbnew.run("DROP TABLE IF EXISTS matches");
         dbnew.run("CREATE TABLE IF NOT EXISTS matches (id INTEGER PRIMARY KEY AUTOINCREMENT,name text,status text,dateTime DATETIME,homeTeam text,awayTeam text,winnerTeam text,noOfUsers Integer)");

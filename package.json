@@ -12,7 +12,8 @@
 		"start": "cross-env NODE_ENV=production node .",
 		"start:dev": "cross-env NODE_ENV=development NODE_PATH=src nodemon -e ts -w src -x ts-node --inspect src/app.ts",
 		"start:docker": "docker run -d -p 3000:3000 kitanotori/express-typescript-example",
-		"test": "ts-mocha src/test/index.ts"
+		"test": "ts-mocha src/test/index.ts",
+		"dbmigrations": "sequelize db:migrate && sequelize db:seed:all"
 	},
 	"dependencies": {
 		"@types/sqlite3": "^3.1.8",

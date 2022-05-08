@@ -12,6 +12,16 @@ This example demonstrates how to build an Express.js application using TypeScrip
 - [Node.js](nodejs.org)
 - [Docker](https://store.docker.com/search?offering=community&type=edition) (optional)
 
+## Running the app
+
+Clone the repo
+Run npm install
+Run 'npm run start:dev' to start the dev server
+Navigate to localhost:3000
+Enter username and password both as 'admin' to login into the application
+Play with the app
+This app is already committed with the sqlite db,however if you want to change data 
+and run migrations use the following commands 'npm run dbmigrations'
 ## Usage
 
 - `npm install && npm run build`: build the project
